@@ -1,5 +1,5 @@
 class Property < ApplicationRecord
-  has_many :stations
+  has_many :stations, dependent: :destroy
   accepts_nested_attributes_for :stations
   validates :name, presence: true
   validates :address, presence: true

@@ -13,27 +13,27 @@
   <% end %>
 
   <div class="field">
-    <p><%= form.label :物件名 %></p>
+    <li><%= form.label :物件名 %></li>
     <%= form.text_field :name, id: :property_name %>
   </div>
   
   <div class="field">
-    <p><%= form.label :賃料 %></p>
-    <%= form.text_field :price, id: :property_price %>
+    <li><%= form.label :賃料 %></li>
+    <%= form.text_field :price, id: :property_price %>円
   </div>
 
   <div class="field">
-    <p><%= form.label :住所 %></p>
+    <li><%= form.label :住所 %></li>
     <%= form.text_field :address, id: :property_address %>
   </div>
 
   <div class="field">
-    <p><%= form.label :築年数 %></p>
-    <%= form.text_field :age, id: :property_age %>
+    <li><%= form.label :築年数 %></li>
+    <%= form.text_field :age, id: :property_age %>年
   </div>
 
   <div class="field">
-    <p><%= form.label :備考 %></p>
+    <li><%= form.label :備考 %></li>
     <%= form.text_area :content, id: :property_content %>
   </div>
 
@@ -46,42 +46,40 @@
     <h2>最寄り駅1</h2>
 
     <div class="field">
-      <p><%= f_stations.label :路線名 %></p>
+      <li><%= f_stations.label :路線名 %></li>
       <%= f_stations.text_field :line, id: :stations_line %>
     </div>
 
     <div class="field">
-      <p><%= f_stations.label :駅名 %></p>
+      <li><%= f_stations.label :駅名 %></li>
       <%= f_stations.text_field :name, id: :stations_name %>
     </div>
 
     <div class="field">
-      <p><%= f_stations.label :徒歩分数 %></p>
-      <%= f_stations.text_field :time, id: :stations_time %>
+      <li><%= f_stations.label :徒歩分数 %></li>
+      <%= f_stations.text_field :time, id: :stations_time %>分
     </div>
     
     <h2>最寄り駅2</h2>
 
     <div class="field">
-      <p><%= f_stations.label :路線名 %></p>
+      <li><%= f_stations.label :路線名 %></li>
       <%= f_stations.text_field :line2, id: :stations_line2 %>
     </div>
 
     <div class="field">
-      <p><%= f_stations.label :駅名 %></p>
+    <li><%= f_stations.label :駅名 %></li>
       <%= f_stations.text_field :name2, id: :stations_name2 %>
     </div>
 
     <div class="field">
-      <p><%= f_stations.label :徒歩分数 %></p>
-      <%= f_stations.text_field :time2, id: :stations_time2 %>
+      <li><%= f_stations.label :徒歩分数 %></li>
+      <%= f_stations.text_field :time2, id: :stations_time2 %>分
     </div>
   <% end %>
 
   <div class="actions">
-    <%= form.submit %>
+    <p><%= form.submit %></p>
   </div>
 
-<% end %>  
-
-<%= link_to '戻る', properties_path %>
+<% end %> 
