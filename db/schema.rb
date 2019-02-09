@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190207082314) do
+ActiveRecord::Schema.define(version: 20190209073101) do
 
   create_table "properties", force: :cascade do |t|
     t.string "name"
@@ -27,9 +27,6 @@ ActiveRecord::Schema.define(version: 20190207082314) do
     t.string "name"
     t.string "line"
     t.integer "time"
-    t.string "name2"
-    t.string "line2"
-    t.integer "time2"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["property_id"], name: "index_stations_on_property_id"

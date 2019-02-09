@@ -41,45 +41,28 @@
 
 
 
-  <%= form.fields_for :stations do |f_stations| %>
+  <%= form.fields_for :stations do |station| %>
 
-    <h2>最寄り駅1</h2>
+    <h2><%= "最寄り駅#{station.index + 1}" %></h2>
 
     <div class="field">
-      <li><%= f_stations.label :路線名 %></li>
-      <%= f_stations.text_field :line, id: :stations_line %>
+      <li><%= station.label :路線名 %></li>
+      <%= station.text_field :line %>
     </div>
 
     <div class="field">
-      <li><%= f_stations.label :駅名 %></li>
-      <%= f_stations.text_field :name, id: :stations_name %>
+      <li><%= station.label :駅名 %></li>
+      <%= station.text_field :name %>
     </div>
 
     <div class="field">
-      <li><%= f_stations.label :徒歩分数 %></li>
-      <%= f_stations.text_field :time, id: :stations_time %>分
-    </div>
-    
-    <h2>最寄り駅2</h2>
-
-    <div class="field">
-      <li><%= f_stations.label :路線名 %></li>
-      <%= f_stations.text_field :line2, id: :stations_line2 %>
-    </div>
-
-    <div class="field">
-    <li><%= f_stations.label :駅名 %></li>
-      <%= f_stations.text_field :name2, id: :stations_name2 %>
-    </div>
-
-    <div class="field">
-      <li><%= f_stations.label :徒歩分数 %></li>
-      <%= f_stations.text_field :time2, id: :stations_time2 %>分
+      <li><%= station.label :徒歩分数 %></li>
+      <%= station.text_field :time %>分
     </div>
   <% end %>
-
+  
   <div class="actions">
-    <p><%= form.submit %></p>
+    <%= form.submit %>
   </div>
-
+    
 <% end %> 
