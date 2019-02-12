@@ -1,3 +1,4 @@
 #!/usr/bin/env ruby
 ENV['BUNDLE_GEMFILE'] ||= File.expand_path('../../Gemfile', __FILE__)
 load Gem.bin_path('bundler', 'bundle')
+# run `bundle lock --add-platform x86-mingw32 x86-mswin32 x64-mingw32 java`
